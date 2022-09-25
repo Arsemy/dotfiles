@@ -1,0 +1,19 @@
+#! /bin/sh
+
+# Capture when is in monocle mode or not (bspwm)
+bspc subscribe desktop_layout | while read -r Event
+do
+  Desktop=$(echo "$Event" | awk '{print $3}')
+  State=$(echo "$Event" | awk '{print $4}')
+  if [ "$State" = "monocle" ]; then
+    bspc query -N -d $Desktop | while read -r Node
+    do
+      xprop -id $Node -f monocle 32c -set monocle 1
+    done
+  elif [ $(bspc config window_gap) -gt 0 ]; then
+    bspc query -N -d $Desktop | while read -r Node
+    do
+      xprop -id $Node -remove monocle
+    done
+  fi
+done &
