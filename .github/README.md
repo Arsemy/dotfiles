@@ -2,7 +2,8 @@
 
 ![Rice](./assets/rice.png "rice")
 
-## Details 📋
+## 📋 Details
+
 ### Components
 - OS: [Arch Linux](https://archlinux.org/)
 - Shell: [Bash](https://www.gnu.org/software/bash/)
@@ -32,7 +33,8 @@
 - Icons: [Kora](https://github.com/bikass/kora)
 - Fonts: [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) && [Cascadia code](https://github.com/microsoft/cascadia-code)
 
-## Modified things ⚙️
+## ⚙️ Modified things
+
 ### GTK - Tokyonight
 If you want to disable the rounded corner of pop-up menu, then modify this
 ```
@@ -61,7 +63,8 @@ To load the modified Catppuccin Mocha theme:
  - Click on *Load unpacked*
  - Select the folder of `manisfest.json` alredy modified
 
-## Some scripts
+## 📜 Some scripts
+
 ### print-maim
 Shows a "+" to select a window or area to print, then moves the screenshot to clipboard and /tmp
 
@@ -80,8 +83,11 @@ Instead of this
 
 ![monocle-script-off](./assets/monocle-script-off.png "monocle-script-off")
 
+## 🗿 Others...
 
-## Acknowledgement
 ### Inspirations 
 - `dotfiles` [HynDuf7/dotfiles](https://github.com/HynDuf7/dotfiles)
 - `dotfiles` [r/unixporn](https://www.reddit.com/r/unixporn/)
+
+### Notes
+- if any english grammar is wrong, please make a pull request or tell me on [reddit](https://www.reddit.com/user/Arsemy)
