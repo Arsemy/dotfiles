@@ -1,4 +1,4 @@
-# Rice 🍚
+# 👽 Rice
 
 ![Rice](./assets/rice.png "rice")
 
