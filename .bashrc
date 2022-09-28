@@ -37,9 +37,6 @@ ex ()
 }
 
 # Start programs with bash
-echo "          To-do "
-todo list
-echo
 
 # Tty commands
 alias x='startx'
