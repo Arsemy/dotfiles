@@ -1,4 +1,4 @@
-# Rice 👍
+# Rice 🍚
 
 ![Rice](./assets/rice.png "rice")
 
@@ -22,7 +22,9 @@
 - Video/audio player: [mpv](https://github.com/mpv-player/mpv)
 - Countdown/Stopwatch: [Termdown](https://github.com/trehn/termdown)
 - Terminal search for Youtube: [Ytfzf](https://github.com/pystardust/ytfzf)
+- Screen capture: [Flameshot](https://github.com/flameshot-org/flameshot)
 - Some scripts
+
 ### Themes
 - GTK-3.0: [Tokyonight](https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme) (**modified**)
 - Brave: [Catppuccin Mocha](https://chrome.google.com/webstore/detail/catppuccin-chrome-theme-m/bkkmolkhemgaeaeggcmfbghljjjoofoh) (**modified**)
