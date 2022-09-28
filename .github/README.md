@@ -23,9 +23,11 @@
 - Countdown/Stopwatch: [Termdown](https://github.com/trehn/termdown)
 - Terminal search for Youtube: [Ytfzf](https://github.com/pystardust/ytfzf)
 - Screen capture: [Flameshot](https://github.com/flameshot-org/flameshot)
+- Page color scheme: [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=en)
 - Some scripts
 
 ### Themes
+- Dark Reader: Tokyonight (built-in)
 - GTK-3.0: [Tokyonight](https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme) (**modified**)
 - Brave: [Catppuccin Mocha](https://chrome.google.com/webstore/detail/catppuccin-chrome-theme-m/bkkmolkhemgaeaeggcmfbghljjjoofoh) (**modified**)
 - Vscodium: [Tokyonight](https://github.com/enkia/tokyo-night-vscode-theme)
