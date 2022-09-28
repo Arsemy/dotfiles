@@ -27,7 +27,7 @@
 - Some scripts
 
 ### Themes
-- Dark Reader: Tokyonight (built-in)
+- Dark Reader: Tokyonight (**built-in**)
 - GTK-3.0: [Tokyonight](https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme) (**modified**)
 - Brave: [Catppuccin Mocha](https://chrome.google.com/webstore/detail/catppuccin-chrome-theme-m/bkkmolkhemgaeaeggcmfbghljjjoofoh) (**modified**)
 - Vscodium: [Tokyonight](https://github.com/enkia/tokyo-night-vscode-theme)
