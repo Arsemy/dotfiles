@@ -30,6 +30,7 @@
 - Dark Reader: Tokyonight (**built-in**) (see how to [enable it](https://github.com/catppuccin/dark-reader))
 - GTK-3.0: [Tokyonight](https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme) (**modified**)
 - Brave: [Catppuccin Mocha](https://chrome.google.com/webstore/detail/catppuccin-chrome-theme-m/bkkmolkhemgaeaeggcmfbghljjjoofoh) (**modified**)
+- Alacritty: [Tokyonight](https://github.com/zatchheems/tokyo-night-alacritty-theme)
 - Vscodium: [Tokyonight](https://github.com/enkia/tokyo-night-vscode-theme)
 - Discord (BetterDiscord): [Tokyonight](https://github.com/Dyzean/Tokyo-Night)
 - Rofi: [Tokyonight](https://github.com/Arsemy/rofi-collection)
