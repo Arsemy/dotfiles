@@ -94,7 +94,7 @@ Instead of this
 
 If you'll use, understand that when i write something on journal i delete the empty hashtag (#empty). Because when i use the filter tool in "Linked reference" of #daily-notes for example, i can exclude the blocks that are empty, then i can see just those that have content.
 
-Want to know how to set my journal template as the default journal page? See [here](https://thinkstack.club/how-to-set-up-an-automated-daily-template-in-logseq/#how-to-set-a-daily-recurring-template)
+Do you want to know how to set my journal template as the default journal page? See [here](https://thinkstack.club/how-to-set-up-an-automated-daily-template-in-logseq/#how-to-set-a-daily-recurring-template)
 
 ### Inspirations 
 - `dotfiles` [HynDuf7/dotfiles](https://github.com/HynDuf7/dotfiles)
