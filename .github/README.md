@@ -21,7 +21,7 @@
 - Code editor: [Vscodium](https://github.com/VSCodium/vscodium)
 - Video/audio player: [mpv](https://github.com/mpv-player/mpv)
 - Countdown/Stopwatch: [Termdown](https://github.com/trehn/termdown)
-- Terminal search for Youtube: [Ytfzf](https://github.com/pystardust/ytfzf)
+- Youtube search on terminal: [Ytfzf](https://github.com/pystardust/ytfzf)
 - Screen capture: [Flameshot](https://github.com/flameshot-org/flameshot)
 - Page color scheme: [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=en)
 - Some scripts
