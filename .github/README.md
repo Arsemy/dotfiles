@@ -99,6 +99,7 @@ Do you want to know how to set my journal template as the default journal page? 
 ### Inspirations 
 - `dotfiles` [HynDuf7/dotfiles](https://github.com/HynDuf7/dotfiles)
 - `dotfiles` [r/unixporn](https://www.reddit.com/r/unixporn/)
+- `journal` [Cara Antonaccio](https://www.youtube.com/watch?v=PN6tjeQfxRc)
 
 ### Notes
 - if any english grammar is wrong, please make a pull request or tell me on [reddit](https://www.reddit.com/user/Arsemy)
