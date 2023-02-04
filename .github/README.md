@@ -49,15 +49,15 @@ Now set `border-radius` to `0px` on `menu,.menu,.context-menu`.
 ![Part that you'll need to modify](./assets/gtk-context-menu.png "Part to be modified")
 
 ### Brave - Catppuccin Mocha
-If you want to change the pastel pink letter color of search bar, then modify this
+If you want to change the pastel pink letter color of search bar, then modify `manifest.json` in the theme version folder
 ```
-$HOME/.config/BraveSoftware/Brave-Browser/Default/Extensions/bkkmolkhemgaeaeggcmfbghljjjoofoh/3.0_0/manifest.json
+$HOME/.config/BraveSoftware/Brave-Browser/Default/Extensions/bkkmolkhemgaeaeggcmfbghljjjoofoh/
 ```
 or you can locate with this
 ```
 find $HOME/.config/BraveSoftware -type f -iname manifest.json -print0 | xargs -0 grep Catppuccin
 ```
-Now set `ntp-link` and `omnibox-text` to `[ 245 224 220 ]`.
+Now set `ntp-link` and `omnibox-text` to `[ 169, 177, 214 ]`.
 
 To load the modified Catppuccin Mocha theme:
  - Go to `brave://extensions/`
