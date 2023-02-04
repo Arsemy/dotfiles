@@ -1,9 +1,7 @@
 # 👽 Rice
-
 ![Rice](./assets/rice.png "rice")
 
 ## 📋 Details
-
 ### Components
 - OS: [Arch Linux](https://archlinux.org/)
 - Shell: [Bash](https://www.gnu.org/software/bash/)
@@ -39,7 +37,6 @@
 - Fonts: [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) && [Cascadia code](https://github.com/microsoft/cascadia-code) && [Nerd Fonts Symbols](https://archlinux.org/packages/community/any/ttf-nerd-fonts-symbols-1000-em/)
 
 ## ⚙️ Modified things
-
 ### GTK - Tokyonight
 If you want to disable the rounded corner of pop-up menu, then modify this
 ```
@@ -69,7 +66,6 @@ To load the modified Catppuccin Mocha theme:
  - Select the folder of `manisfest.json` alredy modified
 
 ## 📜 Some scripts
-
 ### print-maim
 Shows a "+" to select a window or area to print, then moves the screenshot to clipboard and /tmp
 
@@ -89,9 +85,7 @@ Instead of this
 ![monocle-script-off](./assets/monocle-script-off.png "monocle-script-off")
 
 ## 🗿 Others...
-
 ### Logseq Journal Template
-
 If you'll use, understand that when I write something on journal I delete the empty hashtag (#empty). Because when I use the filter tool in "Linked reference" of #daily-notes for example, I can exclude the blocks that are empty, then I can see just those that have content.
 
 Do you want to know how to set my journal template as the default journal page? See [here](https://thinkstack.club/how-to-set-up-an-automated-daily-template-in-logseq/#how-to-set-a-daily-recurring-template)
