@@ -34,7 +34,7 @@
 - Rofi: [Tokyonight](https://github.com/Murzchnvok/rofi-collection)
 - Logseq: [Ayu](https://github.com/nmartin84/logseq-tokyo-theme)
 - Icons: [Kora](https://github.com/bikass/kora)
-- Fonts: [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) && [Cascadia code](https://github.com/microsoft/cascadia-code) && [Nerd Fonts Symbols](https://archlinux.org/packages/community/any/ttf-nerd-fonts-symbols-1000-em/)
+- Fonts: [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono), [Cascadia code](https://github.com/microsoft/cascadia-code) and [Nerd Fonts Symbols](https://archlinux.org/packages/community/any/ttf-nerd-fonts-symbols-1000-em/)
 
 ## ⚙️ Modified things
 ### GTK - Tokyonight
