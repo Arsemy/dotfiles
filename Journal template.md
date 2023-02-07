@@ -1,21 +1,20 @@
-- ## Today
+- # Today
   template:: Journal template
   template-including-parent:: false
-	- ## Awakening
+	- ## Waking up
 		- **🥱 Up @ **
 		- **💻 On pc @ **
 		- **🦉 Starting @ **
 	- ## Day 🌞
-		- ### Study 📚 #study #study-task
-		  query-table:: false
+		- ### Study 📚 #study-task #empty
 			-
-		- ### Others 🗿 #others-task
+		- ### Others 🗿 #others-tasks #empty
 			-
 	- ## Log 🪵
-		- [[study-log]]
+		- [[study-log]] #empty
 			- **Gross time:**
 			- **Lost time:**
 			- **Net time:**
-		- [[notes]] #daily-notes
-		- [[ideas]] #daily-ideas
-		- [[improve]] #daily-improve
+		- [[notes]] #daily-notes #empty
+		- [[ideas]] #daily-ideas #empty
+		- [[improvements]] #daily-improvements #empty
