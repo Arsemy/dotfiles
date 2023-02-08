@@ -1,20 +1,20 @@
 - # Today
-  template:: Journal template
+  template:: Templates_journal
   template-including-parent:: false
-	- ## Waking up
+	- ## [[Waking up]]
 		- **🥱 Up @ **
 		- **💻 On pc @ **
 		- **🦉 Starting @ **
 	- ## Day 🌞
-		- ### Study 📚 #study-task #empty
+		- ### Study 📚 #studies-tasks #journal #empty
 			-
-		- ### Others 🗿 #others-tasks #empty
+		- ### Others 🗿 #others-tasks #journal #empty
 			-
 	- ## Log 🪵
-		- [[study-log]] #empty
+		- [[study-log]] #journal #empty
 			- **Gross time:**
 			- **Lost time:**
 			- **Net time:**
-		- [[notes]] #daily-notes #empty
-		- [[ideas]] #daily-ideas #empty
-		- [[improvements]] #daily-improvements #empty
+		- [[notes]] #journal #empty
+		- [[ideas]] #journal #empty
+		- [[improvements]] #journal #empty
