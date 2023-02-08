@@ -1,5 +1,5 @@
 # 👽 Rice
-![Rice](/.media/rice.png "rice")
+![Rice](docs/assets/rice.png "rice")
 
 ## 📋 Details
 ### Components
@@ -46,7 +46,7 @@ $HOME/.local/share/themes/Tokyonight-Dark-BL/gtk-3.0/gtk.css
 
 Now set `border-radius` to `0px` on `menu,.menu,.context-menu`.
 
-![Part that you'll need to modify](/.media/gtk-context-menu.png "Part to be modified")
+![Part that you'll need to modify](docs/assets/gtk-context-menu.png "Part to be modified")
 
 ### Brave - Catppuccin Mocha
 If you want to change the pastel pink letter color of search bar, then modify `manifest.json` in the theme version folder
@@ -78,11 +78,11 @@ Note: print-maim-delayed is the same, but with 5 seconds of delay
 ### monocle-0-1
 Capture when monocle mode in bspwm is on or off. I use this with a picom opacity rule `"0:monocle@:32c = 1 && !focused"` the result of this is what you see on the image below.
 
-![monocle-script-on](/.media/monocle-script-on.png "monocle-script-off")
+![monocle-script-on](docs/assets/monocle-script-on.png "monocle-script-off")
 
 Instead of this
 
-![monocle-script-off](/.media/monocle-script-off.png "monocle-script-off")
+![monocle-script-off](docs/assets/monocle-script-off.png "monocle-script-off")
 
 ## 🗿 Others...
 ### Logseq Journal Template
