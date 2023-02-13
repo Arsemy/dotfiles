@@ -1,4 +1,4 @@
-require('arsemy.autocmd')
-require('arsemy.setting')
-require('arsemy.keybind')
-require('arsemy.plugin')
+require('arsemy.autocmds')
+require('arsemy.settings')
+require('arsemy.keybinds')
+require('arsemy.plugins')
