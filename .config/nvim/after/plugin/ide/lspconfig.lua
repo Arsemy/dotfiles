@@ -57,7 +57,7 @@ require('lspconfig').pyright.setup({
   handlers = handlers,
   capabilities = capabilities,
 })
-require('lspconfig').sumneko_lua.setup({
+require('lspconfig').lua_ls.setup({
   on_attach = on_attach,
   handlers = handlers,
   capabilities = capabilities,
