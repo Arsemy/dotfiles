@@ -21,6 +21,15 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+
+# Environment variables
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin/appimages:$PATH
+export PATH=$HOME/.config/scripts:$PATH
+export EDITOR=nvim
+export STARSHIP_CONFIG=$HOME/.config/starship/starship-bash.toml
+export TIMEFMT=$'\nreal\t%*E\nuser\t%*U\nsys\t%*S'
+
 # Configuration
 source $HOME/.config/zsh/.zshconf
 
@@ -41,6 +50,7 @@ alias rm='rm -i'
 # Config aliases
 alias bashrc='nvim $HOME/.bashrc'
 alias zshrc='nvim $HOME/.config/zsh/.zshrc'
+alias zshenv='nvim $HOME/.zshenv'
 alias zshconf='nvim $HOME/.config/zsh/.zshconf'
 alias xinitrc='nvim $HOME/.xinitrc'
 alias bspwmrc='nvim $HOME/.config/bspwm/bspwmrc'
