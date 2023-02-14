@@ -27,7 +27,7 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.local/bin/appimages:$PATH
 export PATH=$HOME/.config/scripts:$PATH
 export EDITOR=nvim
-export STARSHIP_CONFIG=$HOME/.config/starship/starship-bash.toml
+export STARSHIP_CONFIG=$HOME/.config/starship/starship-zsh.toml
 export TIMEFMT=$'\nreal\t%*E\nuser\t%*U\nsys\t%*S'
 
 # Configuration
