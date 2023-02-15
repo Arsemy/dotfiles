@@ -75,5 +75,3 @@ function countdown { termdown "$1" --font big -B; mpv --no-video --loop --volume
 
 # Others
 alias sxev="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf \"%-3s %s\n\", \$5, \$8 }'"
-# function code { alacritty -o window.opacity=1 window.padding.x=5 window.padding.y=0 window.dynamic_padding=true -e nvim "$1"; }
-function code { kitty -o background_opacity=1 -o window_padding_width='0 5' -e nvim "$1"; }
