@@ -17,6 +17,9 @@ map('x', '<leader>p', '\"_dP')
 -- Delete and don't copy to clipboard.
 map({'n', 'x'}, '<leader>d', '\"_d')
 
+-- Wrap text toggle
+map('n', '<leader>w', '<cmd>set wrap!<cr>')
+
 -- Clear '/' characters match finder.
 map('n', '<leader>nn', '<cmd>noh<cr>')
 
