@@ -51,6 +51,7 @@ alias rm='rm -i'
 # Config aliases
 alias bashrc='nvim $HOME/.bashrc'
 alias zshrc='nvim $HOME/.config/zsh/.zshrc'
+alias zshenv='nvim $HOME/.zshenv'
 alias zshconf='nvim $HOME/.config/zsh/.zshconf'
 alias xinitrc='nvim $HOME/.xinitrc'
 alias bspwmrc='nvim $HOME/.config/bspwm/bspwmrc'
