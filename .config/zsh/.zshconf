@@ -1,10 +1,11 @@
 # Starship
 eval "$(starship init zsh)"
 
-# Zsh-autosuggestions ctrl-space keybind.
+# Zsh-autosuggestions config.
 autoload -z autosuggest-accept
 zle -N autosuggest-accept
 bindkey '^_' autosuggest-accept
+ZSH_AUTOSUGGEST_HISTORY_IGNORE="^(cd|mv|cp) *"
 
 # Replicates Bash autocompletion style.
 setopt NO_AUTOLIST BASH_AUTOLIST NO_MENUCOMPLETE NO_AUTOMENU
