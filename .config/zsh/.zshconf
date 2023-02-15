@@ -4,7 +4,7 @@ eval "$(starship init zsh)"
 # Zsh-autosuggestions ctrl-space keybind.
 autoload -z autosuggest-accept
 zle -N autosuggest-accept
-bindkey '^ ' autosuggest-accept
+bindkey '^_' autosuggest-accept
 
 # Replicates Bash autocompletion style.
 setopt NO_AUTOLIST BASH_AUTOLIST NO_MENUCOMPLETE NO_AUTOMENU
