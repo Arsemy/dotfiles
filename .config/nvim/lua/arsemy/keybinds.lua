@@ -38,8 +38,14 @@ map('n', '<c-u>', '<C-u>zz')
 map('n', 'n', 'nzzzv')
 map('n', 'N', 'Nzzzv')
 
+-- Change window focus
+map('n', '<c-h>', '<c-w>h')
+map('n', '<c-j>', '<c-w>j')
+map('n', '<c-k>', '<c-w>k')
+map('n', '<c-l>', '<c-w>l')
+
 -- Resize windows with arrows.
-map('n', '<A-k>', '<cmd>resize +2<cr>')
-map('n', '<A-j>', '<cmd>resize -2<cr>')
-map('n', '<A-h>', '<cmd>vertical resize -2<cr>')
-map('n', '<A-l>', '<cmd>vertical resize +2<cr>')
+map('n', '<a-k>', '<cmd>resize +2<cr>')
+map('n', '<a-j>', '<cmd>resize -2<cr>')
+map('n', '<a-h>', '<cmd>vertical resize -2<cr>')
+map('n', '<a-l>', '<cmd>vertical resize +2<cr>')
