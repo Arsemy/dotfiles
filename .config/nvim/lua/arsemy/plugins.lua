@@ -53,8 +53,8 @@ return require('packer').startup({function(use)
   -- Auto close brackets, parenthesis, quotes, etc..
   use 'windwp/nvim-autopairs'
 
-  -- Jump fast to words.
-  use 'phaazon/hop.nvim'
+  -- Jump fast to characters.
+  use 'ggandor/leap.nvim'
 
   -- Git sings in signcolumn.
   use 'lewis6991/gitsigns.nvim'
