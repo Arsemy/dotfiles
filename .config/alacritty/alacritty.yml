@@ -5,6 +5,10 @@ window:
     y: 10
   dynamic_padding: true
 
+cursor:
+  style:
+    blinking: Never
+
 font:
   normal:
     family: JetBrains Mono
@@ -22,7 +26,7 @@ font:
     family: JetBrains Mono
     style: Bold Italic
 
-  size: 8.5
+  size: 9.5
 
 # TokyoNight Colors by Folke
 colors:
