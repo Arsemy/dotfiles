@@ -6,6 +6,10 @@
 super + Return
     alacritty
 
+# Terminal emulator without transparency
+super + alt + Return
+    alacritty -o window.opacity=1
+
 # Program launcher.
 super + space
     dmenu_run
