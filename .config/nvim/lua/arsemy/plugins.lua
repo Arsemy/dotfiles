@@ -59,6 +59,9 @@ return require('packer').startup({function(use)
   -- Git sings in signcolumn.
   use 'lewis6991/gitsigns.nvim'
 
+  -- Tmux window moves integration
+  use 'numToStr/Navigator.nvim'
+
   -- Debugger.
   use 'mfussenegger/nvim-dap'
   use 'rcarriga/nvim-dap-ui'
