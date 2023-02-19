@@ -9,6 +9,9 @@ cursor:
   style:
     blinking: Never
 
+env:
+  TERM: xterm-256color
+
 font:
   normal:
     family: JetBrains Mono
