@@ -1,0 +1,25 @@
+# Tmux theme
+set -g mode-style "fg=#a9b1d6,bg=#3b4261"
+set -g message-style "fg=#a9b1d6,bg=#15161e"
+set -g message-command-style "fg=#a9b1d6,bg=#15161e"
+set -g pane-border-style "fg=#3b4261"
+set -g pane-active-border-style "fg=#a9b1d6"
+set -g pane-border-lines single
+set -g pane-border-indicators off
+set -g status "on"
+set -g status-justify "left"
+set -g status-style "fg=#7aa2f7,bg=#15161e"
+set -g status-left-length "100"
+set -g status-right-length "100"
+set -g status-left ""
+set -g status-left-style NONE
+set -g status-right-style NONE
+set -g status-right "#[fg=#15161e,bg=#7aa2f7,bold] #S "
+setw -g window-status-activity-style "underscore,fg=#a9b1d6,bg=#15161e"
+setw -g window-status-separator ""
+setw -g window-status-style "NONE,fg=#a9b1d6,bg=#15161e"
+setw -g window-status-format "#[fg=#15161e,bg=#3b4261,nobold,nounderscore,noitalics]#[fg=#15161e,bg=#3b4261,bold] #I #[fg=#a9b1d6,bg=#15161e,bold] #W "
+setw -g window-status-current-format "#[fg=#15161e,bg=#3b4261,nobold,nounderscore,noitalics]#[fg=#15161e,bg=#7aa2f7,bold] #I #[fg=#a9b1d6,bg=#15161e,bold] #W "
+# tmux-plugins/tmux-prefix-highlight support.
+set -g @prefix_highlight_output_prefix "#[fg=#e0af68]#[bg=#15161e]#[fg=#16161e]#[bg=#e0af68]"
+set -g @prefix_highlight_output_suffix ""
