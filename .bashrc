@@ -60,6 +60,7 @@ alias picomconf='nvim $HOME/.config/picom/picom.conf'
 alias critty='nvim $HOME/.config/alacritty/alacritty.yml'
 alias polyconf='nvim $HOME/.config/polybar/config.ini'
 alias kittyconf='nvim $HOME/.config/kitty/kitty.conf'
+alias tmuxconf='nvim $HOME/.config/tmux/tmux.conf'
 
 # Mpv
 alias stpl1='mpv --no-video https://youtube.com/playlist?list=PL3ZislPZVGMgeuQYpgC_4WY7TgdEpdQgU'
