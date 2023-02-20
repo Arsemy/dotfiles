@@ -5,7 +5,7 @@ eval "$(starship init zsh)"
 autoload -z autosuggest-accept
 zle -N autosuggest-accept
 bindkey '^_' autosuggest-accept
-ZSH_AUTOSUGGEST_HISTORY_IGNORE="^(cd|mv|cp) *"
+ZSH_AUTOSUGGEST_HISTORY_IGNORE="^(cd|mv|cp|nvim) *"
 
 # Replicates Bash autocompletion style.
 setopt NO_AUTOLIST BASH_AUTOLIST NO_MENUCOMPLETE NO_AUTOMENU
