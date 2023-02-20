@@ -5,7 +5,7 @@ set -g message-command-style "fg=#a9b1d6,bg=#15161e"
 set -g pane-border-style "fg=#3b4261"
 set -g pane-active-border-style "fg=#a9b1d6"
 set -g pane-border-lines single
-set -g pane-border-indicators off
+set -g pane-border-indicators colour
 set -g status "on"
 set -g status-justify "left"
 set -g status-style "fg=#7aa2f7,bg=#15161e"
