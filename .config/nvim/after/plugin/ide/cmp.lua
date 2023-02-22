@@ -33,7 +33,7 @@ cmp.setup({
     ['<c-f>'] = cmp.mapping.scroll_docs(4),
     ['<c-e>'] = cmp.mapping.abort(),
     ['<nop>'] = cmp.mapping.complete(),
-    ['<c-/>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    ['<c-_>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
