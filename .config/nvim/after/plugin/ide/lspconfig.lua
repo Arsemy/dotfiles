@@ -1,15 +1,3 @@
-vim.cmd [[
-  highlight! DiagnosticLineNrError guifg=#f7768e gui=bold
-  highlight! DiagnosticLineNrWarn guifg=#e0af68 gui=bold
-  highlight! DiagnosticLineNrInfo guifg=#7dcfff gui=bold
-  highlight! DiagnosticLineNrHint guifg=#9ece6a gui=bold
-
-  sign define DiagnosticSignError linehl= numhl=DiagnosticLineNrError
-  sign define DiagnosticSignWarn linehl= numhl=DiagnosticLineNrWarn
-  sign define DiagnosticSignInfo linehl= numhl=DiagnosticLineNrInfo
-  sign define DiagnosticSignHint linehl= numhl=DiagnosticLineNrHint
-]]
-
 local function lsp_highlight_document(client)
   if client.server_capabilities.documentHighlightProvider then
     vim.cmd [[
@@ -37,9 +25,22 @@ vim.diagnostic.config({
   virtual_text = false,
   float = { border=border, prefix=' ', source='always', },
   update_in_insert = true,
+  underline = true,
 })
 
 local on_attach = function(client, bufnr)
+  vim.cmd [[
+  highlight! DiagnosticLineNrError guifg=#f7768e gui=bold
+  highlight! DiagnosticLineNrWarn guifg=#e0af68 gui=bold
+  highlight! DiagnosticLineNrInfo guifg=#7dcfff gui=bold
+  highlight! DiagnosticLineNrHint guifg=#9ece6a gui=bold
+
+  sign define DiagnosticSignError linehl= numhl=DiagnosticLineNrError
+  sign define DiagnosticSignWarn linehl= numhl=DiagnosticLineNrWarn
+  sign define DiagnosticSignInfo linehl= numhl=DiagnosticLineNrInfo
+  sign define DiagnosticSignHint linehl= numhl=DiagnosticLineNrHint
+  ]]
+
   lsp_highlight_document(client)
   local bufopts = { noremap=true, silent=true, buffer=bufnr, }
   vim.keymap.set('n', '<leader><leader>K', vim.lsp.buf.hover, bufopts)
