@@ -62,6 +62,9 @@ return require('packer').startup({function(use)
   -- Tmux window moves integration
   use 'numToStr/Navigator.nvim'
 
+  -- Lsp, dap, linter and formatter installer
+  use 'williamboman/mason.nvim'
+
   -- Debugger.
   use 'mfussenegger/nvim-dap'
   use 'rcarriga/nvim-dap-ui'
