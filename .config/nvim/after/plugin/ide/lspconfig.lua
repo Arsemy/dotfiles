@@ -57,6 +57,7 @@ require('lspconfig').pyright.setup({
   on_attach = on_attach,
   handlers = handlers,
   capabilities = capabilities,
+  reportUnknownArgumentType = false,
 })
 require('lspconfig').lua_ls.setup({
   on_attach = on_attach,
