@@ -8,7 +8,7 @@ require('telescope').setup({
       initial_mode = 'normal',
       scroll_strategy = 'limit',
       side_by_side = true,
-      layout_strategy = 'vertical',
+      layout_strategy = 'horizontal',
       use_delta = true,
       use_custom_command = nil, -- setting this implies `use_delta = false`. Accepted format is: { "bash", "-c", "echo '$DIFF' | delta" }
       diff_context_lines = vim.o.scrolloff,
