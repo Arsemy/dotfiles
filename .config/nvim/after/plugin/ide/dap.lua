@@ -1,4 +1,4 @@
-vim.keymap.set('n', '<f1>', function() require('dapui').toggle() end)
+vim.keymap.set('n', '<f1>', function() require('dapui').toggle({reset = true,}) end)
 vim.keymap.set('n', '<f2>', function() require('dap').step_over() end)
 vim.keymap.set('n', '<f3>', function() require('dap').step_into() end)
 vim.keymap.set('n', '<f4>', function() require('dap').step_out() end)
