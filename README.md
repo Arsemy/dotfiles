@@ -1,3 +1,5 @@
+Maintained dotfiles: https://github.com/Arsemy/dotfiles
+
 # 👽 Rice
 ![Rice](docs/assets/rice.png "rice")
 
