@@ -40,7 +40,7 @@ Maintained dotfiles: https://github.com/Arsemy/dotfiles
 
 ## ⚙️ Modified things
 ### GTK - Tokyonight
-If you want to disable the rounded corner of pop-up menu, then modify this
+If you want to disable the rounded corner of the pop-up menu, then modify this
 ```
 $HOME/.local/share/themes/Tokyonight-Dark-BL/gtk-3.0/gtk.css
 ```
@@ -51,7 +51,7 @@ Now set `border-radius` to `0px` on `menu,.menu,.context-menu`.
 ![Part that you'll need to modify](docs/assets/gtk-context-menu.png "Part to be modified")
 
 ### Brave - Catppuccin Mocha
-If you want to change the pastel pink letter color of search bar, then modify `manifest.json` in the theme version folder
+If you want to change the pastel pink letter color of the search bar, then modify the `manifest.json` file in the theme version folder.
 ```
 $HOME/.config/BraveSoftware/Brave-Browser/Default/Extensions/bkkmolkhemgaeaeggcmfbghljjjoofoh/
 ```
@@ -69,7 +69,7 @@ To load the modified Catppuccin Mocha theme:
 
 ## 📜 Some scripts
 ### print-maim
-Shows a "+" to select a window or area to print, then moves the screenshot to clipboard and /tmp
+Shows a "+" to select a window or an area to print, then moves the screenshot to clipboard and /tmp
 
 - Dependencies:
 	- [maim](https://github.com/naelstrof/maim)
@@ -78,7 +78,7 @@ Shows a "+" to select a window or area to print, then moves the screenshot to cl
 Note: print-maim-delayed is the same, but with 5 seconds of delay
 
 ### monocle-0-1
-Capture when monocle mode in bspwm is on or off. I use this with a picom opacity rule `"0:monocle@:32c = 1 && !focused"` the result of this is what you see on the image below.
+Capture when monocle mode in bspwm is on or off. I use this in conjunction with a picom opacity rule (`0:monocle@:32c = 1 && !focused`). The result of this is what you see in the image below.
 
 ![monocle-script-on](docs/assets/monocle-script-on.png "monocle-script-off")
 
@@ -88,7 +88,7 @@ Instead of this
 
 ## 🗿 Others...
 ### Logseq Journal Template
-If you'll use, understand that when I write something on journal I delete the empty hashtag (#empty). Because when I use the filter tool in "Linked reference" of #daily-notes for example, I can exclude the blocks that are empty, then I can see just those that have content.
+If you plan to use this, please understand that when I write something in my journal, I delete empty hashtags (#empty). This is because when I use the filter tool in "Linked references", I can exclude blocks that are empty and only see those with content.
 
 Do you want to know how to set my journal template as the default journal page? See [here](https://thinkstack.club/how-to-set-up-an-automated-daily-template-in-logseq/#how-to-set-a-daily-recurring-template)
 
