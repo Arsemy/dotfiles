@@ -86,7 +86,7 @@ Instead of this
 
 ![monocle-script-off](docs/assets/monocle-script-off.png "monocle-script-off")
 
-## 🗿 Others...
+## 🌸 Others...
 ### Logseq Journal Template
 If you plan to use this, please understand that when I write something in my journal, I delete empty hashtags (#empty). This is because when I use the filter tool in "Linked references", I can exclude blocks that are empty and only see those with content.
 
