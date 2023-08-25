@@ -1,42 +1,143 @@
-Maintained dotfiles: https://github.com/Arsemy/dotfiles
-
-# 👽 Rice
-![Rice](docs/assets/rice.png "rice")
+![Rice](/docs/assets/rice.png "rice")
 
 ## 📋 Details
-### Components
-- OS: [Arch Linux](https://archlinux.org/)
-- Shell: [Bash](https://www.gnu.org/software/bash/)
-- Fetch: [Nitch](https://github.com/unxsh/nitch)
-- Terminal: [Alacritty](https://github.com/alacritty/alacritty)
-- TWM: [Bspwm](https://github.com/baskerville/bspwm)
-- Compositor: [Picom](https://github.com/yshui/picom)
-- Status bar: [Polybar](https://github.com/polybar/polybar) (with [openweather-simple](https://github.com/polybar/polybar-scripts/tree/master/polybar-scripts/openweathermap-simple))
-- App launcher: [Rofi](https://github.com/davatorium/rofi)
-- File manager: [Nemo](https://github.com/linuxmint/nemo)
-- Hotkey daemon: [Sxhkd](https://github.com/baskerville/sxhkd)
-- Browser: [Brave](https://github.com/brave/brave-browser)
-- Note taking: [Logseq](https://github.com/logseq/logseq)
-- Discord client: [BetterDiscord](https://github.com/BetterDiscord/BetterDiscord)
-- Code editor: [Vscodium](https://github.com/VSCodium/vscodium)
-- Video/audio player: [mpv](https://github.com/mpv-player/mpv)
-- Countdown/Stopwatch: [Termdown](https://github.com/trehn/termdown)
-- Youtube search on terminal: [Ytfzf](https://github.com/pystardust/ytfzf)
-- Screen capture: [Flameshot](https://github.com/flameshot-org/flameshot)
-- Page color scheme: [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=en)
-- Some scripts
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center" colspan="2">Components</th>
+    </tr>
+  </thead>
+  <tbody align="center">
+    <tr>
+      <td>OS</td>
+      <td><a href="https://archlinux.org/">Arch Linux</a></td>
+    </tr>
+    <tr>
+      <td>Shell</td>
+      <td><a href="https://www.gnu.org/software/bash/">Bash</a></td>
+    </tr>
+    <tr>
+      <td>Fetch</td>
+      <td><a href="https://github.com/unxsh/nitch">Nitch</a></td>
+    </tr>
+    <tr>
+      <td>Terminal</td>
+      <td><a href="https://github.com/alacritty/alacritty">Alacritty</a></td>
+    </tr>
+    <tr>
+      <td>TWM</td>
+      <td><a href="https://github.com/baskerville/bspwm">Bspwm</a></td>
+    </tr>
+    <tr>
+      <td>Compositor</td>
+      <td><a href="https://github.com/yshui/picom">Picom</a></td>
+    </tr>
+    <tr>
+      <td>Status bar</td>
+      <td><a href="https://github.com/polybar/polybar">Polybar</a> (<a href="https://github.com/polybar/polybar-scripts/tree/master/polybar-scripts/openweathermap-simple">openweather-simple</a>)</td>
+    </tr>
+    <tr>
+      <td>App launcher</td>
+      <td><a href="https://github.com/davatorium/rofi">Rofi</a></td>
+    </tr>
+    <tr>
+      <td>File manager</td>
+      <td><a href="https://github.com/linuxmint/nemo">Nemo</a></td>
+    </tr>
+    <tr>
+      <td>Hotkey daemon</td>
+      <td><a href="https://github.com/baskerville/sxhkd">Sxhkd</a></td>
+    </tr>
+    <tr>
+      <td>Browser</td>
+      <td><a href="https://github.com/brave/brave-browser">Brave</a></td>
+    </tr>
+    <tr>
+      <td>Note taking</td>
+      <td><a href="https://github.com/logseq/logseq">Logseq</a></td>
+    </tr>
+    <tr>
+      <td>Discord client</td>
+      <td><a href="https://github.com/BetterDiscord/BetterDiscord">BetterDiscord</a></td>
+    </tr>
+    <tr>
+      <td>Code editor</td>
+      <td><a href="https://github.com/VSCodium/vscodium">Vscodium</a></td>
+    </tr>
+    <tr>
+      <td>Video/audio player</td>
+      <td><a href="https://github.com/mpv-player/mpv">mpv</a></td>
+    </tr>
+    <tr>
+      <td>Countdown/Stopwatch</td>
+      <td><a href="https://github.com/trehn/termdown">Termdown</a></td>
+    </tr>
+    <tr>
+      <td>Youtube search in terminal</td>
+      <td><a href="https://github.com/pystardust/ytfzf">Ytfzf</a></td>
+    </tr>
+    <tr>
+      <td>Screen capture</td>
+      <td><a href="https://github.com/flameshot-org/flameshot">Flameshot</a></td>
+    </tr>
+    <tr>
+      <td>Page color scheme</td>
+      <td><a href="https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=en">Dark Reader</a></td>
+    </tr>
+  </tbody>
+</table>
 
-### Themes
-- Dark Reader: Tokyonight (**built-in**) (see how to [enable it](https://github.com/catppuccin/dark-reader))
-- GTK-3.0: [Tokyonight](https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme) (**modified**)
-- Brave: [Catppuccin Mocha](https://chrome.google.com/webstore/detail/catppuccin-chrome-theme-m/bkkmolkhemgaeaeggcmfbghljjjoofoh) (**modified**)
-- Alacritty: [Tokyonight](https://github.com/zatchheems/tokyo-night-alacritty-theme)
-- Vscodium: [Tokyonight](https://github.com/enkia/tokyo-night-vscode-theme)
-- Discord (BetterDiscord): [Tokyonight](https://github.com/Dyzean/Tokyo-Night)
-- Rofi: [Tokyonight](https://github.com/Murzchnvok/rofi-collection)
-- Logseq: [Ayu](https://github.com/nmartin84/logseq-tokyo-theme)
-- Icons: [Kora](https://github.com/bikass/kora)
-- Fonts: [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono), [Cascadia code](https://github.com/microsoft/cascadia-code) and [Nerd Fonts Symbols](https://archlinux.org/packages/community/any/ttf-nerd-fonts-symbols-1000-em/)
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center" colspan="4">Themes</th>
+    </tr>
+  </thead>
+  <tbody align="center">
+    <tr>
+      <td>Dark Reader</td>
+      <td colspan="3"><a href="https://github.com/catppuccin/dark-reader">Tokyonight (built-in)</a></td>
+    </tr>
+    <tr>
+      <td>GTK-3.0</td>
+      <td colspan="3"><a href="https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme">Tokyonight (modified)</a></td>
+    </tr>
+    <tr>
+      <td>Brave</td>
+      <td colspan="3"><a href="https://chrome.google.com/webstore/detail/catppuccin-chrome-theme-m/bkkmolkhemgaeaeggcmfbghljjjoofoh">Catppuccin Mocha (modified)</a></td>
+    </tr>
+    <tr>
+      <td>Alacritty</td>
+      <td colspan="3"><a href="https://github.com/zatchheems/tokyo-night-alacritty-theme">Tokyonight</a></td>
+    </tr>
+    <tr>
+      <td>Vscodium</td>
+      <td colspan="3"><a href="https://github.com/enkia/tokyo-night-vscode-theme">Tokyonight</a></td>
+    </tr>
+    <tr>
+      <td>Discord (BetterDiscord)</td>
+      <td colspan="3"><a href="https://github.com/Dyzean/Tokyo-Night">Tokyonight</a></td>
+    </tr>
+    <tr>
+      <td>Rofi</td>
+      <td colspan="3"><a href="https://github.com/Murzchnvok/rofi-collection">Tokyonight</a></td>
+    </tr>
+    <tr>
+      <td>Logseq</td>
+      <td colspan="3"><a href="https://github.com/nmartin84/logseq-tokyo-theme">Ayu</a></td>
+    </tr>
+    <tr>
+      <td>Icons</td>
+      <td colspan="3"><a href="https://github.com/bikass/kora">Kora</a></td>
+    </tr>
+    <tr>
+      <td>Fonts</td>
+      <td><a href="https://github.com/JetBrains/JetBrainsMono">JetBrains Mono</a></td>
+      <td><a href="https://github.com/microsoft/cascadia-code">Cascadia code</a></td>
+      <td><a href="https://archlinux.org/packages/community/any/ttf-nerd-fonts-symbols-1000-em/">Nerd Fonts Symbols</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## ⚙️ Modified things
 ### GTK - Tokyonight
@@ -48,7 +149,7 @@ $HOME/.local/share/themes/Tokyonight-Dark-BL/gtk-3.0/gtk.css
 
 Now set `border-radius` to `0px` on `menu,.menu,.context-menu`.
 
-![Part that you'll need to modify](docs/assets/gtk-context-menu.png "Part to be modified")
+<img height="200px" src="/docs/assets/gtk-context-menu.png" alt="Part that you&#39;ll need to modify" title="Part to be modified">
 
 ### Brave - Catppuccin Mocha
 If you want to change the pastel pink letter color of the search bar, then modify the `manifest.json` file in the theme version folder.
@@ -72,19 +173,19 @@ To load the modified Catppuccin Mocha theme:
 Shows a "+" to select a window or an area to print, then moves the screenshot to clipboard and /tmp
 
 - Dependencies:
-	- [maim](https://github.com/naelstrof/maim)
-	- [xclip](https://github.com/astrand/xclip)
+    - [maim](https://github.com/naelstrof/maim)
+    - [xclip](https://github.com/astrand/xclip)
 
 Note: print-maim-delayed is the same, but with 5 seconds of delay
 
 ### monocle-0-1
 Capture when monocle mode in bspwm is on or off. I use this in conjunction with a picom opacity rule (`0:monocle@:32c = 1 && !focused`). The result of this is what you see in the image below.
 
-![monocle-script-on](docs/assets/monocle-script-on.png "monocle-script-off")
+<img height="350px" src="/docs/assets/monocle-script-on.png" alt="monocle-script-on" title="monocle-script-on">
 
 Instead of this
 
-![monocle-script-off](docs/assets/monocle-script-off.png "monocle-script-off")
+<img height="350px" src="/docs/assets/monocle-script-off.png" alt="monocle-script-off" title="monocle-script-off">
 
 ## 🌸 Others...
 ### Logseq Journal Template
@@ -98,4 +199,4 @@ Do you want to know how to set my journal template as the default journal page? 
 - `journal` [Cara Antonaccio](https://www.youtube.com/watch?v=PN6tjeQfxRc)
 
 ### Notes
-- if any english grammar is wrong, please make a pull request or tell me on [reddit](https://www.reddit.com/user/Arsemy)
+- if any english grammar is wrong, I'll be glad to know, tell me on [reddit](https://www.reddit.com/user/Arsemy)
