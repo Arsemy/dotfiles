@@ -34,7 +34,7 @@
     </tr>
     <tr>
       <td>Status bar</td>
-      <td><a href="https://github.com/polybar/polybar">Polybar</a> (<a href="https://github.com/polybar/polybar-scripts/tree/master/polybar-scripts/openweathermap-simple">openweather-simple</a>)</td>
+      <td><a href="https://github.com/polybar/polybar">Polybar</a></td>
     </tr>
     <tr>
       <td>App launcher</td>
