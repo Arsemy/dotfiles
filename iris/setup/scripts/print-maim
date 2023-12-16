@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Shows a + to select a window or area to print, then moves the screenshot to clipboard and /tmp
+maim -s | xclip -selection clipboard -t image/png; xclip -selection clipboard -t image/png -o > /tmp/$(date +%F-%H:%M:%S).png

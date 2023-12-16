@@ -1,0 +1,66 @@
+#!/bin/bash
+
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1   ;;
+      *.gz)        gunzip  $1   ;;
+      *.tar)       tar xf  $1   ;;
+      *.tar.zst)   zstd -d $1   ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip   $1   ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x    $1   ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+# Environment variables
+PATH=$HOME/.local/bin:$PATH
+PATH=$HOME/.local/bin/appimages:$PATH
+PATH=$HOME/.local/bin/scripts:$PATH
+export EDITOR=nvim
+
+# Tty aliases
+alias x='startx'
+alias w='startw'
+
+# Basic aliases
+alias la='LC_COLLATE=C ls -a --color -h --group-directories-first'
+alias ll='LC_COLLATE=C ls -l --color -h --group-directories-first'
+alias lla='LC_COLLATE=C ls -la --color -h --group-directories-first'
+alias ls='LC_COLLATE=C ls --color=auto --color -h --group-directories-first'
+alias rm='rm -i'
+alias grep='grep --colour'
+
+# Config aliases
+alias shellrc='nvim $HOME/.config/shell/shellrc'
+alias bashrc='nvim $HOME/.bashrc'
+alias zshrc='nvim $HOME/.config/zsh/.zshrc'
+alias zshenv='nvim $HOME/.zshenv'
+alias zshconf='nvim $HOME/.config/zsh/.zshconf'
+alias xinitrc='nvim $HOME/.xinitrc'
+alias bspwmrc='nvim $HOME/.config/bspwm/bspwmrc'
+alias sxhkdrc='nvim $HOME/.config/sxhkd/sxhkdrc'
+alias picomconf='nvim $HOME/.config/picom/picom.conf'
+alias critty='nvim $HOME/.config/alacritty/alacritty.yml'
+alias polyconf='nvim $HOME/.config/polybar/config.ini'
+alias kittyconf='nvim $HOME/.config/kitty/kitty.conf'
+alias tmuxconf='nvim $HOME/.config/tmux/tmux.conf'
+alias footconf='nvim $HOME/.config/foot/foot.ini'
+
+# Mpv
+alias stpl1='mpv --no-video "https://youtube.com/playlist?list=PL3ZislPZVGMgeuQYpgC_4WY7TgdEpdQgU"'
+alias study1='mpv --no-video --loop "https://youtu.be/yLOM8R6lbzg"'
+
+# Termdown
+alias stopwatch='termdown --font big'
+function countdown { termdown "$1" --font big -B; mpv --no-video --loop --volume=80 $HOME/.local/share/assets/alarm.wav; }

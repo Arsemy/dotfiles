@@ -1,0 +1,53 @@
+# Starship
+eval "$(starship init zsh)"
+
+# Zsh-autosuggestions config.
+autoload -z autosuggest-accept
+zle -N autosuggest-accept
+bindkey '^_' autosuggest-accept
+ZSH_AUTOSUGGEST_HISTORY_IGNORE="^(cd|mv|cp|nvim) *"
+
+# Replicates Bash autocompletion style.
+setopt NO_AUTOLIST BASH_AUTOLIST NO_MENUCOMPLETE NO_AUTOMENU
+
+# History file
+HISTFILE=~/.config/zsh/.histfile HISTSIZE=1000
+SAVEHIST=1000
+unsetopt beep notify
+
+# Completion
+zstyle :compinstall filename '/home/arsemy/.config/zsh/.zshrc'
+autoload -Uz compinit
+compinit
+
+# Activate vim mode.
+bindkey -v
+
+# Edit with nvim pressing v in normal mode.
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
+# Remove mode switching delay.
+KEYTIMEOUT=5
+
+# Change cursor shape for different vi modes.
+function zle-keymap-select {
+if [[ ${KEYMAP} == vicmd ]] ||
+    [[ $1 = 'block' ]]; then
+        echo -ne '\e[1 q'
+
+    elif [[ ${KEYMAP} == main ]] ||
+        [[ ${KEYMAP} == viins ]] ||
+        [[ ${KEYMAP} = '' ]] ||
+        [[ $1 = 'beam' ]]; then
+                echo -ne '\e[5 q'
+fi
+}
+zle -N zle-keymap-select
+
+_fix_cursor() {
+   echo -ne '\e[5 q'
+}
+
+precmd_functions+=(_fix_cursor)
