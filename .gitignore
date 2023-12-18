@@ -2,7 +2,6 @@
 .histfile
 .zcompdump
 
-dwl
 *.o
 *-protocol.c
 *-protocol.h
@@ -54,7 +53,6 @@ blocks.h
 *.i*86
 *.x86_64
 *.hex
-someblocks
 
 # Debug files
 *.dSYM/

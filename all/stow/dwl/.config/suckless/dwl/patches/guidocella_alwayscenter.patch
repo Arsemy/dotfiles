@@ -1,0 +1,23 @@
+From b0de6c64d78689a133c0ae608c2d32e5ba07dee8 Mon Sep 17 00:00:00 2001
+From: Guido Cella <guido@guidocella.xyz>
+Date: Wed, 3 May 2023 09:28:43 +0200
+Subject: [PATCH] Center floating windows
+
+Credits to Benjamin Chausse for fixing this with multiple monitors.
+---
+ dwl.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/dwl.c b/dwl.c
+index b7436bb4f..88f5f81d7 100644
+--- a/dwl.c
++++ b/dwl.c
+@@ -465,6 +465,8 @@ applyrules(Client *c)
+ 					mon = m;
+ 		}
+ 	}
++	c->geom.x = (mon->w.width - c->geom.width) / 2 + mon->m.x;
++	c->geom.y = (mon->w.height - c->geom.height) / 2 + mon->m.y;
+ 	wlr_scene_node_reparent(&c->scene->node, layers[c->isfloating ? LyrFloat : LyrTile]);
+ 	setmon(c, mon, newtags);
+ }

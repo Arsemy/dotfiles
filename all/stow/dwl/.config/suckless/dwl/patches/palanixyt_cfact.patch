@@ -1,0 +1,117 @@
+From c1aea90156f5a0bf01aa14cdabcd77db7258b132 Mon Sep 17 00:00:00 2001
+From: Palanix <palanixyt@gmail.com>
+Date: Sun, 23 Apr 2023 00:25:53 +0200
+Subject: [PATCH] First try at cweight, allowing for clients to take up space
+ according to their weight
+
+---
+ config.def.h |  3 +++
+ dwl.c        | 30 ++++++++++++++++++++++++++++--
+ 2 files changed, 31 insertions(+), 2 deletions(-)
+
+diff --git a/config.def.h b/config.def.h
+index c6a495048..f62601183 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -117,6 +117,9 @@ static const Key keys[] = {
+ 	{ MODKEY,                    XKB_KEY_d,          incnmaster,     {.i = -1} },
+ 	{ MODKEY,                    XKB_KEY_h,          setmfact,       {.f = -0.05} },
+ 	{ MODKEY,                    XKB_KEY_l,          setmfact,       {.f = +0.05} },
++	{ MODKEY,                    XKB_KEY_H,          setcfact,       {.f = +0.25} },
++	{ MODKEY,                    XKB_KEY_L,          setcfact,       {.f = -0.25} },
++	{ MODKEY,                    XKB_KEY_K,          setcfact,       {.f = 0} },
+ 	{ MODKEY,                    XKB_KEY_Return,     zoom,           {0} },
+ 	{ MODKEY,                    XKB_KEY_Tab,        view,           {0} },
+ 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_C,          killclient,     {0} },
+diff --git a/dwl.c b/dwl.c
+index b7436bb4f..7adb4528a 100644
+--- a/dwl.c
++++ b/dwl.c
+@@ -126,6 +126,7 @@ typedef struct {
+ 	uint32_t tags;
+ 	int isfloating, isurgent, isfullscreen;
+ 	uint32_t resize; /* configure serial of a pending resize */
++	float cweight;
+ } Client;
+ 
+ typedef struct {
+@@ -288,6 +289,7 @@ static void rendermon(struct wl_listener *listener, void *data);
+ static void requeststartdrag(struct wl_listener *listener, void *data);
+ static void resize(Client *c, struct wlr_box geo, int interact);
+ static void run(char *startup_cmd);
++static void setcfact(const Arg *arg);
+ static void setcursor(struct wl_listener *listener, void *data);
+ static void setfloating(Client *c, int floating);
+ static void setfullscreen(Client *c, int fullscreen);
+@@ -1006,6 +1008,7 @@ createnotify(struct wl_listener *listener, void *data)
+ 	c = xdg_surface->data = ecalloc(1, sizeof(*c));
+ 	c->surface.xdg = xdg_surface;
+ 	c->bw = borderpx;
++	c->cweight = 1.0;
+ 
+ 	LISTEN(&xdg_surface->events.map, &c->map, mapnotify);
+ 	LISTEN(&xdg_surface->events.unmap, &c->unmap, unmapnotify);
+@@ -1987,6 +1990,17 @@ run(char *startup_cmd)
+ 	wl_display_run(dpy);
+ }
+ 
++void
++setcfact(const Arg *arg)
++{
++	Client *sel = focustop(selmon);
++
++	if(!arg || !sel || !selmon->lt[selmon->sellt]->arrange)
++		return;
++	sel->cweight = arg->f ? sel->cweight + arg->f : 1.0;
++	arrange(selmon);
++}
++
+ void
+ setcursor(struct wl_listener *listener, void *data)
+ {
+@@ -2360,6 +2374,7 @@ void
+ tile(Monitor *m)
+ {
+ 	unsigned int i, n = 0, mw, my, ty;
++	float mweight = 0, tweight = 0;
+ 	Client *c;
+ 
+ 	wl_list_for_each(c, &clients, link)
+@@ -2372,17 +2387,27 @@ tile(Monitor *m)
+ 		mw = m->nmaster ? m->w.width * m->mfact : 0;
+ 	else
+ 		mw = m->w.width;
++	i = 0;
++	wl_list_for_each(c, &clients, link){
++		if (!VISIBLEON(c, m) || c->isfloating || c->isfullscreen)
++			continue;
++		if (i < m->nmaster)
++			mweight += c->cweight;
++		else
++			tweight += c->cweight;
++		i++;
++	}
+ 	i = my = ty = 0;
+ 	wl_list_for_each(c, &clients, link) {
+ 		if (!VISIBLEON(c, m) || c->isfloating || c->isfullscreen)
+ 			continue;
+ 		if (i < m->nmaster) {
+ 			resize(c, (struct wlr_box){.x = m->w.x, .y = m->w.y + my, .width = mw,
+-				.height = (m->w.height - my) / (MIN(n, m->nmaster) - i)}, 0);
++				.height = ((c->cweight / mweight) * m->w.height)}, 0);
+ 			my += c->geom.height;
+ 		} else {
+ 			resize(c, (struct wlr_box){.x = m->w.x + mw, .y = m->w.y + ty,
+-				.width = m->w.width - mw, .height = (m->w.height - ty) / (n - i)}, 0);
++				.width = m->w.width - mw, .height = ((c->cweight / tweight) * m->w.height) }, 0);
+ 			ty += c->geom.height;
+ 		}
+ 		i++;
+@@ -2720,6 +2745,7 @@ createnotifyx11(struct wl_listener *listener, void *data)
+ 	c->surface.xwayland = xsurface;
+ 	c->type = xsurface->override_redirect ? X11Unmanaged : X11Managed;
+ 	c->bw = borderpx;
++	c->cweight = 1.0;
+ 
+ 	/* Listen to the various events it can emit */
+ 	LISTEN(&xsurface->events.map, &c->map, mapnotify);

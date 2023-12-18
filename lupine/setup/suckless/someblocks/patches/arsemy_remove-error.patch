@@ -1,0 +1,12 @@
+diff --git a/someblocks.c b/someblocks.c
+index f149896..bc4692e 100644
+--- a/someblocks.c
++++ b/someblocks.c
+@@ -142,7 +142,6 @@ void psomebar()
+ 			somebarFd = open(somebarPath, O_WRONLY|O_CLOEXEC);
+ 		}
+ 		if (somebarFd < 0) {
+-			perror("open");
+ 			return;
+ 		}
+ 	}
