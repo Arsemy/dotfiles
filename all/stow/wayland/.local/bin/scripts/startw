@@ -1,3 +1,4 @@
 #!/bin/bash
 
-source $HOME/.config/dwl/dwlrc
+sway
+# source $HOME/.config/dwl/dwlrc
