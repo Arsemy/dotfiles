@@ -30,8 +30,8 @@ PATH=$HOME/.local/bin/scripts:$PATH
 export EDITOR=nvim
 
 # Tty aliases
-alias x='startx'
-alias w='startw'
+alias sx='startx'
+alias sw='startw'
 
 # Basic aliases
 alias la='LC_COLLATE=C ls -a --color -h --group-directories-first'
