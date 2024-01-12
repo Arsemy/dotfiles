@@ -1,0 +1,213 @@
+#################
+### Variables ###
+#################
+
+set $mod Mod4
+set $left h
+set $down j
+set $up k
+set $right l
+set $term foot
+set $menu bemenu-run
+
+
+##############
+### Basics ###
+##############
+
+# wallpaper
+output HDMI-A-1 bg $HOME/.local/share/assets/russia-90s.png fill
+
+# resolution
+output HDMI-A-1 resolution 1920x1080 position 1920,0
+
+# mouse focus
+focus_follows_mouse no
+
+# window activation
+focus_on_window_activation none
+
+# smart borders
+smart_borders on
+
+# smart gaps
+smart_gaps on
+
+
+#################
+### Autostart ###
+#################
+
+exec_always  "killall yambar; yambar &"
+exec "logseq"
+assign [class="Logseq"] workspace D
+
+
+#####################
+### Customization ###
+#####################
+
+# gaps
+gaps inner 5
+
+# title bar
+default_border pixel 2
+titlebar_border_thickness 2
+font monospace 0
+
+# tokyonight theme
+# property name             border  bg      text    indicator child-border
+client.focused              #c0caf5 #1a1b26 #c0caf5 #c0caf5   #c0caf5
+client.focused_inactive     #292e42 #1a1b26 #6a6f87 #292e42   #292e42
+client.unfocused            #292e42 #1a1b26 #6a6f87 #292e42   #292e42
+client.urgent               #292e42 #1a1b26 #6a6f87 #292e42   #292e42
+client.placeholder          #292e42 #1a1b26 #6a6f87 #292e42   #292e42
+
+# swaybar
+bar {
+    position top
+    font cascadia code 11
+
+    status_command while $HOME/.config/sway/scripts/status; do sleep 1; done
+    swaybar_command yambar
+
+    tray {
+        tray_padding 4
+    }
+
+    colors {
+        statusline #c0caf5
+        background #1a1b26
+        focused_workspace #1a1b26 #1a1b26 #c0caf5
+        inactive_workspace #1a1b26 #1a1b26 #6a6f87
+        urgent_workspace #1a1b26 #1a1b26 #c0caf5
+    }
+}
+
+#############
+### Input ###
+#############
+
+input 5426:138:Razer_Razer_Viper_Mini {
+    accel_profile "flat"
+}
+
+input "type:keyboard" {
+    xkb_layout us
+    xkb_variant alt-intl
+    xkb_options caps:escape
+}
+
+
+################
+### Keybinds ###
+################
+
+# execute terminal
+bindsym $mod+Return exec $term
+
+# kill window
+bindsym $mod+w kill
+
+# execute app launcher
+bindsym $mod+p exec $menu
+
+# drag windows
+floating_modifier $mod normal
+
+# reload the configuration file
+bindsym $mod+Shift+r reload
+
+# exit sway
+bindsym $mod+Shift+q exec swaymsg exit
+
+# move your focus around
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+# switch window place
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+# switch to workspace
+bindsym $mod+z workspace Z
+bindsym $mod+x workspace X
+bindsym $mod+c workspace C
+bindsym $mod+v workspace V
+bindsym $mod+a workspace A
+bindsym $mod+s workspace S
+bindsym $mod+d workspace D
+bindsym $mod+f workspace F
+
+# move focused container to workspace
+bindsym $mod+Shift+z move container to workspace Z
+bindsym $mod+Shift+x move container to workspace X
+bindsym $mod+Shift+c move container to workspace C
+bindsym $mod+Shift+v move container to workspace B
+bindsym $mod+Shift+a move container to workspace A
+bindsym $mod+Shift+s move container to workspace S
+bindsym $mod+Shift+d move container to workspace D
+bindsym $mod+Shift+f move container to workspace F
+
+# split the current object
+bindsym $mod+period splith
+bindsym $mod+comma splitv
+
+# switch the current container between different layout styles
+bindsym $mod+n layout stacking
+bindsym $mod+m layout tabbed
+bindsym $mod+b layout toggle split
+
+# make the current focus fullscreen
+bindsym $mod+slash fullscreen
+
+# toggle the current focus between tiling and floating mode
+bindsym $mod+Shift+space floating toggle
+
+# swap focus between the tiling area and the floating area
+bindsym $mod+space focus mode_toggle
+
+# move the currently focused window to the scratchpad
+bindsym $mod+Shift+0 move scratchpad
+
+# show the next scratchpad window or hide the focused scratchpad window
+bindsym $mod+0 scratchpad show
+
+# move focus to the parent container
+bindsym $mod+Shift+comma focus parent
+
+# moves focus to the last-focused child of the focused container
+bindsym $mod+Shift+period focus child
+
+# resize
+bindsym $mod+r mode "resize"
+mode "resize" {
+    # up will shrink the containers height
+    bindsym $up resize shrink height 10px
+    # right will grow the containers width
+    bindsym $right resize grow width 10px
+    # down will grow the containers height
+    bindsym $down resize grow height 10px
+    # left will shrink the containers width
+    bindsym $left resize shrink width 10px
+
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# audio control
+bindsym --locked $mod+plus exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym --locked $mod+minus exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym --locked $mod+equal exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+
+##############
+### Others ###
+##############
+
+include /etc/sway/config.d/*

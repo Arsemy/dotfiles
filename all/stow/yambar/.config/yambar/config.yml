@@ -1,0 +1,111 @@
+std_underline: &std_underline {underline: { size: 2, color: DD5001FF}}
+icon_font: &icon_font 'Symbols Nerd Font:pixelsize=14'
+
+bar:
+  background: 1a1b26ff
+  foreground: c0caf5ff
+
+  font: 'cascadia code'
+
+  location: 'top'
+  height: 26
+  margin: 5
+  spacing: 8
+
+  right:
+    - mem:
+        poll-interval: 1000
+        content:
+          list:
+            items:
+              - string:
+                  text: '󰍛 '
+                  font: *icon_font
+              - string:
+                  text: '{percent_used}%'
+    - pulse:
+        content:
+          list:
+            items:
+              - map:
+                  conditions:
+                    sink_muted:
+                      string:
+                        text: '󰝟 '
+                        font: *icon_font
+                        on-click:
+                          right: 'pavucontrol'
+                          left: 'pactl set-sink-mute @DEFAULT_SINK@ toggle'
+                          wheel-up: 'pactl set-sink-volume @DEFAULT_SINK@ +5%'
+                          wheel-down: 'pactl set-sink-volume @DEFAULT_SINK@ -5%'
+                    sink_percent <= 15:
+                      string:
+                        text: '󰕿 '
+                        font: *icon_font
+                        on-click:
+                          right: 'pavucontrol'
+                          left: 'pactl set-sink-mute @DEFAULT_SINK@ toggle'
+                          wheel-up: 'pactl set-sink-volume @DEFAULT_SINK@ +5%'
+                          wheel-down: 'pactl set-sink-volume @DEFAULT_SINK@ -5%'
+                    sink_percent <= 30:
+                      string:
+                        text: '󰖀 '
+                        font: *icon_font
+                        on-click:
+                          right: 'pavucontrol'
+                          left: 'pactl set-sink-mute @DEFAULT_SINK@ toggle'
+                          wheel-up: 'pactl set-sink-volume @DEFAULT_SINK@ +5%'
+                          wheel-down: 'pactl set-sink-volume @DEFAULT_SINK@ -5%'
+                    ~sink_muted:
+                      string:
+                        text: '󰕾 '
+                        font: *icon_font
+                        on-click:
+                          right: 'pavucontrol'
+                          left: 'pactl set-sink-mute @DEFAULT_SINK@ toggle'
+                          wheel-up: 'pactl set-sink-volume @DEFAULT_SINK@ +5%'
+                          wheel-down: 'pactl set-sink-volume @DEFAULT_SINK@ -5%'
+              - string:
+                  text: '{sink_percent}%'
+                  on-click:
+                    right: 'pavucontrol'
+                    left: 'pactl set-sink-mute @DEFAULT_SINK@ toggle'
+                    wheel-up: 'pactl set-sink-volume @DEFAULT_SINK@ +5%'
+                    wheel-down: 'pactl set-sink-volume @DEFAULT_SINK@ -5%'
+  left:
+    - i3:
+        content:
+          '':
+            map:
+              conditions:
+                urgent:
+                  string:
+                    text: ""
+                    foreground: f7768eff
+                state == focused:
+                  string:
+                    text: ""
+                    foreground: c0caf5ff
+                empty:
+                  string:
+                    text: ''
+                    foreground: 6a6f87ff
+                state == invisible:
+                  string:
+                    text: ""
+                    foreground: 6a6f87ff
+        persistent:
+          - 'Z'
+          - 'X'
+          - 'C'
+          - 'V'
+          - 'A'
+          - 'S'
+          - 'D'
+          - 'F'
+        spacing: 5
+
+  center:
+    - clock:
+        content:
+          - string: {text: '{time}'}

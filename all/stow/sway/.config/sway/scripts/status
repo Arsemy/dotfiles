@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "$(free -h | awk '/^Mem: /{ printf "%s", $3}' | sed 's/.$//') | $(date +'%H:%M')"
