@@ -11,4 +11,4 @@
     dog = log --decorate=short --oneline --graph
     doga = log --decorate=short --oneline --graph --all
 [safe]
-	directory = /run/mount/misc/notes
+	directory = /run/media/arsemy/misc/notes
