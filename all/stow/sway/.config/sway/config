@@ -39,9 +39,10 @@ smart_gaps on
 #################
 
 exec_always  "killall yambar; yambar &"
-exec "logseq"
-assign [class="Logseq"] workspace D
+exec "logseq &"
+exec "git-auto -d /home/arsemy/others/misc/notes -i 30 -p &"
 
+assign [class="Logseq"] workspace D
 
 #####################
 ### Customization ###
