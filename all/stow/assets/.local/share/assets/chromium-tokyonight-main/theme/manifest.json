@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Tokyonight",
+  "description": "Tokyonight theme",
+  "version": "1.0.0",
+  "icons": {
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+  },
+  "theme": {
+    "colors": {
+      "background_tab": [ 26, 27, 38 ],
+      "background_tab_inactive": [ 26, 27, 38 ],
+      "background_tab_incognito": [ 26, 27, 38 ],
+      "background_tab_incognito_inactive": [ 26, 27, 38 ],
+      "bookmark_text": [ 192, 202, 245 ],
+      "frame": [ 26, 27, 38 ],
+      "frame_inactive": [ 26, 27, 38 ],
+      "frame_incognito": [ 26, 27, 38 ],
+      "frame_incognito_inactive": [ 26, 27, 38 ],
+      "ntp_background": [ 26, 27, 38 ],
+      "ntp_text": [ 192, 202, 245 ],
+      "omnibox_background": [ 41, 46, 66 ],
+      "omnibox_text": [ 192, 202, 245 ],
+      "tab_background_text": [ 106, 111, 135 ],
+      "tab_background_text_inactive": [ 106, 111, 135 ],
+      "tab_background_text_incognito": [ 106, 111, 135 ],
+      "tab_background_text_incognito_inactive": [ 106, 111, 135 ],
+      "tab_text": [ 192, 202, 245 ],
+      "toolbar": [ 26, 27, 38 ],
+      "toolbar_button_icon": [ 192, 202, 245 ],
+      "toolbar_text": [ 192, 202, 245 ]
+    }
+  }
+}

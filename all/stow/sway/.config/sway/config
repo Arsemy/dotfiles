@@ -16,7 +16,7 @@ set $menu bemenu-run
 ##############
 
 # wallpaper
-output HDMI-A-1 bg $HOME/.local/share/assets/russia-90s.png fill
+output HDMI-A-1 bg $HOME/.local/share/assets/girl_alley-jongwoongpark.jpg fill
 
 # resolution
 output HDMI-A-1 resolution 1920x1080 position 1920,0
@@ -38,11 +38,14 @@ smart_gaps on
 ### Autostart ###
 #################
 
-exec_always  "killall yambar; yambar &"
-exec "logseq &"
-exec "git-auto -d /home/arsemy/others/misc/notes -i 30 -p &"
-
 assign [class="Logseq"] workspace D
+
+exec_always  "killall yambar; yambar & sleep 0.5 && sway workspace D"
+
+exec "logseq"
+exec "foot --server"
+exec "nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'"
+
 
 #####################
 ### Customization ###
@@ -53,8 +56,8 @@ gaps inner 5
 
 # title bar
 default_border pixel 2
+default_floating_border pixel 2
 titlebar_border_thickness 2
-font monospace 0
 
 # tokyonight theme
 # property name             border  bg      text    indicator child-border
@@ -104,6 +107,9 @@ input "type:keyboard" {
 ### Keybinds ###
 ################
 
+# print selected area
+bindsym $mod+1 exec grim -g "$(slurp)" - | wl-copy
+
 # execute terminal
 bindsym $mod+Return exec $term
 
@@ -148,7 +154,7 @@ bindsym $mod+f workspace F
 bindsym $mod+Shift+z move container to workspace Z
 bindsym $mod+Shift+x move container to workspace X
 bindsym $mod+Shift+c move container to workspace C
-bindsym $mod+Shift+v move container to workspace B
+bindsym $mod+Shift+v move container to workspace V
 bindsym $mod+Shift+a move container to workspace A
 bindsym $mod+Shift+s move container to workspace S
 bindsym $mod+Shift+d move container to workspace D

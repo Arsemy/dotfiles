@@ -90,6 +90,10 @@ bar:
                   string:
                     text: ''
                     foreground: 6a6f87ff
+                visible:
+                  string:
+                    text: ""
+                    foreground: 6a6f87ff
                 state == invisible:
                   string:
                     text: ""

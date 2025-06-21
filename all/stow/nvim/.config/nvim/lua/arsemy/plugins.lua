@@ -82,8 +82,14 @@ return require('packer').startup({function(use)
   use 'hrsh7th/cmp-cmdline'
 
   -- Debugger.
-  use 'mfussenegger/nvim-dap'
-  use 'rcarriga/nvim-dap-ui'
+  use {
+    'rcarriga/nvim-dap-ui',
+    requires = {
+      'mfussenegger/nvim-dap',
+      'nvim-neotest/nvim-nio'
+    }
+  }
+
 
   -- Tmux window moves integration
   use 'numToStr/Navigator.nvim'

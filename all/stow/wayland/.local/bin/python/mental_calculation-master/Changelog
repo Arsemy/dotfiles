@@ -1,0 +1,92 @@
+0.5
+* Switch to Google TTS API
+* Add a combobox to choose voice of speech synthesis
+
+0.4
+* Switch to online Microsoft Translator API v2 to get TTS sounds
+* Switch to PyQt5
+* Switch to python3
+
+0.3.5.6
+* Fix bug that crash mentalcalculation when pressing OK button in settings dialog
+
+0.3.5.5
+* Fix some bug in the setup.py script
+
+0.3.5.4
+* Fix a bug with the minus sign in turkish speaking
+
+0.3.5.3
+* Minor fixes about translations and shortcuts
+
+0.3.5.2
+* Increase timeout before showing answer in "hands-free" mode
+* Don't fail if phonon is not available (on Linux)
+
+0.3.5.1
+* Changes in the README/LISEZMOI to be more explicit about the option of Windows explorer that needs to be changed to be able to see hidden files/directories and to access the configuration file.
+
+0.3.5
+* One can use F11 to switch to full screen. Font size is auto-adjusted with the size of the window.
+* It is available in several new languagues now: czech, spanish, italian; french was already available.
+
+0.3.4.4
+* now one can change the font from the conf. file
+
+0.3.4.3
+* new options can be changed from the configuration file: the colors of background and font and use a sound after each number. Look at the README
+
+0.3.4.2
+* add a minimize button to the main window
+
+0.3.4.1
+* change maximum values in the settings dialog
+
+0.3.4
+* new mode called "continuous" or "handsfree":
+It doe snot ask for an answer but display it and proceed to continue to display a new sequence ad infinitam
+* 'Replay' button replaces the complicated use of the 'Shift' key
+* a full-screen mode
+
+0.3.3
+* fixes a bug about the way to replay by using <shift>+<Return> and adds the long awaited possibility to force espeak to pronounce numbers one digit at a time
+
+0.3.2
+* allow to replay a sequence. It would be helpful for beginners or for the ones trying a higher level of difficulty. You can't score twice when replaying a sequence you gave a good answer
+
+0.3.1.6
+* fix some bugs with espeak language and command when specified from .ini file
+
+0.3.1.5
+* No sign for first number
+* Update gui to use subtractions instead of negative numbers
+
+0.3.1.4
+* Thank burlie for the soroban image
+* Fix bug where there is always negative number
+
+0.3.1.3
+* Unify the way to handle sound. Use a tmp file for every sound !
+* Stop sound when clicking stop or exiting
+* Fix a bug in random number generation
+* Update README and LISEZMOI
+* Fix a bug with synthesis sound
+
+0.3.1.2
+* Rework random generation
+
+0.3.1.1
+* finally found how to translate a QDialogButtonBox
+
+0.3.1
+* add possibility to specify
+- espeak path
+- espeak language
+- espeak speed in words per minute
+in ini file
+
+0.3
+* gui has been recreated. use a small dialog for the settings.
+* use espeak for speech synthesis and add some sounds for bad/good answer
+and bell for end of serie
+* add some smileys
