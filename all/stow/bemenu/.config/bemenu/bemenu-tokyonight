@@ -1,0 +1,19 @@
+#!/bin/bash
+
+export BEMENU_OPTS="
+    --ignorecase\
+    --prompt ''\
+    --fn 'Cascadia Code 10'\
+    --ch '20'\
+    --center\
+    --width-factor '0.25'\
+    --list '14'\
+    --line-height '26'\
+    --fixed-height\
+    --border '2'\
+    --bdr '#c0caf5'\
+    --hb '#292e42' --hf '#c0caf5'\
+    --nb '#1a1b26' --nf '#a9b1d6'\
+    --ab '#1a1b26' --af '#a9b1d6'\
+    --fb '#1a1b26' --ff '#a9b1d6'\
+"
